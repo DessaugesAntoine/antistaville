@@ -42,18 +42,18 @@
 
     <RouterView />
 
-    <footer class="mt-20 pt-20 pb-10 bg-bgd-gray">
+    <footer class="mt-20 pt-12 lg:pt-20 pb-10 bg-bgd-gray">
         <div class="container mx-auto">
-            <div class="pb-24 border-b border-border-gray flex justify-between gap-4">
+            <div class="pb-10 lg:pb-24 border-b border-border-gray flex justify-between gap-x-4 gap-y-14 flex-col lg:flex-row mx-4 lg:mx-0">
                 <div>
                     <FooterSubtitle text="Navigation"/>
                     <div class="flex flex-col gap-2">
-                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Administration et autorités</RouterLink> 
-                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Vie pratique</RouterLink> 
-                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Culture, sport et loisirs</RouterLink> 
-                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Agenda</RouterLink> 
-                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Actualités</RouterLink> 
-                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Guichet</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-lg lg:text-2xl" :to="{ name: 'another-page' }">Administration et autorités</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-lg lg:text-2xl" :to="{ name: 'another-page' }">Vie pratique</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-lg lg:text-2xl" :to="{ name: 'another-page' }">Culture, sport et loisirs</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-lg lg:text-2xl" :to="{ name: 'another-page' }">Agenda</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-lg lg:text-2xl" :to="{ name: 'another-page' }">Actualités</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-lg lg:text-2xl" :to="{ name: 'another-page' }">Guichet</RouterLink> 
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="py-10 border-b border-border-gray flex justify-between gap-4">
+            <div class="py-10 border-b border-border-gray flex justify-between gap-x-4 gap-y-14 flex-col lg:flex-row mx-4 lg:mx-0">
                 <div>
                     <FooterSubtitle text="Adresse"/>
                     <p class="text-lg">
@@ -93,8 +93,8 @@
 
                 <div>
                     <FooterSubtitle text="Contact"/>
-                    <a class="bg-white font-bold rounded-lg py-2 px-3 inline-block mb-2" href="tel:0221234567">022 123 45 67</a><br/>
-                    <a class="bg-white font-bold rounded-lg py-2 px-3 inline-block" href="mailto:mairie@antistaville.ch">mairie@antistaville.ch</a>
+                    <a class="border-2 border-border-gray bg-white font-bold rounded-lg py-2 px-3 inline-block mb-2" href="tel:0221234567">022 123 45 67</a><br/>
+                    <a class="border-2 border-border-gra bg-white font-bold rounded-lg py-2 px-3 inline-block" href="mailto:mairie@antistaville.ch">mairie@antistaville.ch</a>
                 </div>
 
                 <div>
@@ -127,9 +127,9 @@
                 </div>
             </div>
 
-            <div class="pt-10 flex justify-between gap-4 text-custom-gray">
-                <div class="flex gap-4">
-                    <div class="mr-8">Copyright © {{ new Date().getFullYear() }} Antistaville</div>
+            <div class="pt-10 flex justify-between gap-4 text-custom-gray flex-col lg:flex-row mx-4 lg:mx-0">
+                <div class="flex gap-4 flex-wrap">
+                    <div class="mr-8 basis-full lg:basis-auto">Copyright © {{ new Date().getFullYear() }} Antistaville</div>
                     <RouterLink class="underline decoration-footer-underline underline-offset-4" :to="{ name: 'another-page' }">Protections des données</RouterLink>
                     <RouterLink class="underline decoration-footer-underline underline-offset-4" :to="{ name: 'another-page' }">Plan du site</RouterLink>
                     <RouterLink class="underline decoration-footer-underline underline-offset-4" :to="{ name: 'another-page' }">Lexique</RouterLink>
