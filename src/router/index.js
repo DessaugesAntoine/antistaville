@@ -15,7 +15,7 @@ const router = createRouter({
             name: 'another-page',
             component: AnotherPage
         }
-    ]
+    ],
 })
 
 export default router
