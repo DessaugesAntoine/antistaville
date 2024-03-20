@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <header class="container mx-auto text-custom-black px-3">
+    <header class="container mx-auto text-custom-black px-4">
         <div class="py-6 xl:py-12 border-b border-border-gray flex items-center justify-between">
             <RouterLink :to="{ name: 'another-page' }">
                 <img alt="Vue logo" class="w-32 xl:w-36" src="@/assets/logo.svg"/>

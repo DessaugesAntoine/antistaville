@@ -8,7 +8,7 @@
 	font-family: 'Inter', sans-serif;
 }
 
-.router-link-active{
+header nav .router-link-active{
 	text-decoration: underline;
 	text-underline-offset: 6px;
 }
