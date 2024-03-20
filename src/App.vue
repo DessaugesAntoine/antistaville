@@ -1,6 +1,8 @@
 <script setup>
     import { RouterLink, RouterView } from 'vue-router'
     import Button from './components/ButtonComponent.vue'
+    import H3Title from './components/H3TitleComponent.vue'
+    import FooterSubtitle from './components/FooterSubtitleComponent.vue'
 </script>
 
 <template>
@@ -39,4 +41,101 @@
     </header>
 
     <RouterView />
+
+    <footer class="mt-20 pt-20 pb-10 bg-bgd-gray">
+        <div class="container mx-auto">
+            <div class="pb-24 border-b border-border-gray flex justify-between gap-4">
+                <div>
+                    <FooterSubtitle text="Navigation"/>
+                    <div class="flex flex-col gap-2">
+                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Administration et autorités</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Vie pratique</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Culture, sport et loisirs</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Agenda</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Actualités</RouterLink> 
+                        <RouterLink class="font-lexend font-bold text-2xl" :to="{ name: 'another-page' }">Guichet</RouterLink> 
+                    </div>
+                </div>
+
+                <div>
+                    <FooterSubtitle text="Liens utiles"/>
+                    <div class="flex flex-col gap-1">
+                        <RouterLink class="text-lg" :to="{ name: 'another-page' }">Économie locale</RouterLink> 
+                        <RouterLink class="text-lg" :to="{ name: 'another-page' }">Location de salles</RouterLink> 
+                        <RouterLink class="text-lg" :to="{ name: 'another-page' }">Offres d'emploi</RouterLink> 
+                        <RouterLink class="text-lg" :to="{ name: 'another-page' }">Organiser une manifestation</RouterLink> 
+                        <RouterLink class="text-lg" :to="{ name: 'another-page' }">Conseil Communal</RouterLink> 
+                    </div>
+                </div>
+
+                <div>
+                    <div class="max-w-96 bg-white rounded-lg py-8 px-6">
+                        <H3Title text="Newsletter"/>
+                        <p class="mt-2 mb-6 text-lg">Inscrivez-vous pour rester au courant de la vie d’Antistaville.</p>
+                        <div class="flex gap-3">
+                            <input type="email" placeholder="Entrez votre email" class="bg-bgd-gray rounded-lg py-2 px-3 w-[calc(100%-135px)]">
+                            <Button text="Je m’inscris" route="another-page"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-10 border-b border-border-gray flex justify-between gap-4">
+                <div>
+                    <FooterSubtitle text="Adresse"/>
+                    <p class="text-lg">
+                        Mairie d’Antistaville<br/>
+                        Rue de l’Amour-du-Web<br/>
+                        Case postale 42<br/>
+                        1000 Antistaville
+                    </p>
+                </div>
+
+                <div>
+                    <FooterSubtitle text="Contact"/>
+                    <a class="bg-white font-bold rounded-lg py-2 px-3 inline-block mb-2" href="tel:0221234567">022 123 45 67</a><br/>
+                    <a class="bg-white font-bold rounded-lg py-2 px-3 inline-block" href="mailto:mairie@antistaville.ch">mairie@antistaville.ch</a>
+                </div>
+
+                <div>
+                    <FooterSubtitle text="Horaires du guichet"/>
+                    <p class="text-lg">
+                        <span class="inline-block w-28">Lundi</span> 09:00-14:00<br/>
+                        <span class="inline-block w-28">Mardi</span> 09:00-14:00<br/>                
+                        <span class="inline-block w-28">Mercredi</span> 09:00-14:00<br/>                
+                        <span class="inline-block w-28">Jeudi</span> 09:00-14:00<br/>                
+                        <span class="inline-block w-28">Vendredi</span> 09:00-14:00         
+                    </p>
+                </div>
+
+                <div class="pr-24">
+                    <FooterSubtitle text="Réseaux sociaux"/>
+                    <div class="flex">
+                        <a href="http://www.facebook.com/" target="_blank">
+                            <img alt="Facebook icone" src="@/assets/icons/facebook_icon.svg"/>
+                        </a>     
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img alt="Facebook icone" src="@/assets/icons/instagram_icon.svg"/>
+                        </a>     
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <img alt="Facebook icone" src="@/assets/icons/linkedin_icon.svg"/>
+                        </a>     
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img alt="Facebook icone" src="@/assets/icons/youtube_icon.svg"/>
+                        </a>     
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-10 flex justify-between gap-4 text-custom-gray">
+                <div class="flex gap-4">
+                    <div class="mr-8">Copyright © {{ new Date().getFullYear() }} Antistaville</div>
+                    <RouterLink class="underline decoration-footer-underline underline-offset-4" :to="{ name: 'another-page' }">Protections des données</RouterLink>
+                    <RouterLink class="underline decoration-footer-underline underline-offset-4" :to="{ name: 'another-page' }">Plan du site</RouterLink>
+                    <RouterLink class="underline decoration-footer-underline underline-offset-4" :to="{ name: 'another-page' }">Lexique</RouterLink>
+                </div>
+                <div>Réalisé par <a class="underline decoration-footer-underline underline-offset-4" href="https://antistatique.net" target="_blank">Antistatique</a></div>
+            </div>
+        </div>
+    </footer>
 </template>
