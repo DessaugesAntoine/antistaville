@@ -15,7 +15,8 @@ const router = createRouter({
             name: 'another-page',
             component: AnotherPage
         }
-    ]
+    ],
+    linkActiveClass: "active underline underline-offset-4",
 })
 
 export default router
