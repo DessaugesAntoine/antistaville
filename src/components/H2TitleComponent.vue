@@ -5,5 +5,5 @@
 </script>
 
 <template>
-    <h2 class="font-lexend text-3xl font-bold">{{ text }}</h2>  
+    <h2 class="font-lexend text-2xl lg:text-3xl font-bold">{{ text }}</h2>  
 </template>

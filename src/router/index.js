@@ -6,7 +6,7 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: '/actualites/anstistabus-une-ludotheque-sur-roues',
+            path: '/actualites/antistabus-une-ludotheque-sur-roues',
             name: 'example-news',
             component: NewsSingleView
         },

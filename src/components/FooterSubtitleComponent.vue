@@ -5,5 +5,5 @@
 </script>
 
 <template>
-    <h1 class="font-lexend text-3xl lg:text-5xl font-bold">{{ text }}</h1>  
+    <div class="font-lexend uppercase text-sm font-semibold mb-4">{{ text }}</div>
 </template>
